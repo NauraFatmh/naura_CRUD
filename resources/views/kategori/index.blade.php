@@ -5,8 +5,8 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
-                        <h3>Table Keysar</h3>
-                        <a href="{{ route('keysar.create') }}" class="btn btn-primary">Add</a>
+                        <h3>Table kategori</h3>
+                        <a href="{{ route('kategori.create') }}" class="btn btn-primary">Add</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -20,18 +20,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @forelse ($keysar as $item)
+                                    @forelse ($kategori as $item)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $item->nama }}</td>
                                             <td>{{ $item->dkr }}</td>
                                             <td>
-                                                <form action="{{ route('keysar.destroy', $item->id) }}" method="POST"
+                                                <form action="{{ route('kategori.destroy', $item->id) }}" method="POST"
                                                     class="d-flex gap-3">
                                                     @csrf
-                                                    <a href="{{ route('keysar.show', $item->id) }}"
+                                                    <a href="{{ route('kategori.show', $item->id) }}"
                                                         class="btn btn-info">Read</a>
-                                                    <a href="{{ route('keysar.edit', $item->id) }}"
+                                                    <a href="{{ route('kategori.edit', $item->id) }}"
                                                         class="btn btn-secondary">Edit</a>
 
                                                     @method('DELETE')

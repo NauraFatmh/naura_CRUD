@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\KeysarController;
+use App\Http\Controllers\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,18 +14,18 @@ use App\Http\Controllers\KeysarController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('keysar', [KeysarController::class, 'index'])->name('keysar.index');
-Route::get('keysar-create', [KeysarController::class, 'create'])->name('keysar.create');
-Route::post('keysar-store', [KeysarController::class, 'store'])->name('keysar.store');
+Route::get('/', [KategoriController::class, 'index'])->name('kategori.index');
+Route::get('kategori-create', [KategoriController::class, 'create'])->name('kategori.create');
+Route::post('kategori-store', [KategoriController::class, 'store'])->name('kategori.store');
 
-Route::get('keysar-edit/edit/{id}', [KeysarController::class, 'edit'])->name('keysar.edit');
-Route::post('keysar-update/{id}', [KeysarController::class, 'update'])->name('keysar.update');
-Route::get('keysar-show/{id}', [KeysarController::class, 'show'])->name('keysar.show');
-Route::delete('keysar-delete/{id}', [KeysarController::class, 'destroy'])->name('keysar.destroy');
+Route::get('kategori-edit/edit/{id}', [KategoriController::class, 'edit'])->name('kategori.edit');
+Route::post('kategori-update/{id}', [KategoriController::class, 'update'])->name('kategori.update');
+Route::get('kategori-show/{id}', [KategoriController::class, 'show'])->name('kategori.show');
+Route::delete('kategori-delete/{id}', [KategoriController::class, 'destroy'])->name('kategori.destroy');
 
 
 // Auth::routes();

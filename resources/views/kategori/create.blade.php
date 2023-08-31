@@ -5,11 +5,11 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
-                        <h3>Form Keysar</h3>
-                        <a href="{{ route('keysar.index') }}" class="btn btn-secondary">Back</a>
+                        <h3>Form Kategori</h3>
+                        <a href="{{ route('kategori.index') }}" class="btn btn-secondary">Back</a>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('keysar.store') }}" method="POST">
+                        <form action="{{ route('kategori.store') }}" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label for="">Nama</label>

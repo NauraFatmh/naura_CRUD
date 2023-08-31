@@ -5,12 +5,12 @@
             <div class="col-12">
                 <div class="card p-3">
                     <div class="group">
-                        <h5>{{ $keysar->nama }}</h5>
-                        <h5>{{ $keysar->dkr }}</h5>
+                        <h5>{{ $kategori->nama }}</h5>
+                        <h5>{{ $kategori->dkr }}</h5>
                     </div>
                     <div class="group">
-                        <a href="{{ route('keysar.index') }}" class="btn btn-success">Back</a>
-                        <a href="{{ route('keysar.edit', $keysar->id) }}" class="btn btn-secondary">Edit</a>
+                        <a href="{{ route('kategori.index') }}" class="btn btn-success">Back</a>
+                        <a href="{{ route('kategori.edit', $kategori->id) }}" class="btn btn-secondary">Edit</a>
                     </div>
                 </div>
             </div>

@@ -6,19 +6,19 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <h3>Form Edit</h3>
-                        <a href="{{ route('keysar.index') }}" class="btn btn-secondary">Back</a>
+                        <a href="{{ route('kategori.index') }}" class="btn btn-secondary">Back</a>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('keysar.update', $keysar->id) }}" method="POST">
+                        <form action="{{ route('kategori.update', $kategori->id) }}" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label for="">Nama</label>
-                                <input type="text" name="nama" class="form-control" value="{{ $keysar->nama }}"
+                                <input type="text" name="nama" class="form-control" value="{{ $kategori->nama }}"
                                     required>
                             </div>
                             <div class="form-group">
                                 <label for="">Deskripsi</label>
-                                <input type="text" name="dkr" class="form-control" value="{{ $keysar->dkr }}"
+                                <input type="text" name="dkr" class="form-control" value="{{ $kategori->dkr }}"
                                     required>
                             </div>
                             <div class="mt-3">

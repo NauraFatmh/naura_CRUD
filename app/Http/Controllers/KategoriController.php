@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\keysar;
+use App\Models\kategori;
 use Illuminate\Http\Request;
 
-class KeysarController extends Controller
+class KategoriController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,8 @@ class KeysarController extends Controller
     public function index()
     {
         //
-        $keysar = keysar::all();
-        return view('keysar.index', compact('keysar'));
+        $kategori = kategori::all();
+        return view('kategori.index', compact('kategori'));
     }
 
     /**
@@ -23,7 +23,7 @@ class KeysarController extends Controller
     public function create()
     {
         //
-        return view('keysar.create');
+        return view('kategori.create');
     }
 
     /**
@@ -36,52 +36,52 @@ class KeysarController extends Controller
             'nama'=>'required',
             'dkr'=>'required',
         ]);
-        $keysar = keysar::create($request->all());
-        return redirect()->route('keysar.index');
+        $kategori = kategori::create($request->all());
+        return redirect()->route('kategori.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(keysar $keysar, $id)
+    public function show(kategori $kategori, $id)
     {
         //
-        $keysar = keysar::find($id);
-        return view('keysar.show', compact('keysar'));
+        $kategori = kategori::find($id);
+        return view('kategori.show', compact('kategori'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(keysar $keysar, $id)
+    public function edit(kategori $kategori, $id)
     {
         //
-        $keysar = keysar::find($id);
-        return view('keysar.edit',compact('keysar'));
+        $kategori = kategori::find($id);
+        return view('kategori.edit',compact('kategori'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, keysar $keysar, $id)
+    public function update(Request $request, kategori $kategori, $id)
     {
         //
         $request->validate([
             'nama'=>'required',
             'dkr'=>'required',
         ]);
-        $keysar = keysar::find($id);
-        $keysar->update($request->all());
-        return redirect()->route('keysar.index');
+        $kategori = kategori::find($id);
+        $kategori->update($request->all());
+        return redirect()->route('kategori.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(keysar $keysar, $id)
+    public function destroy(kategori $kategori, $id)
     {
         //
-        $keysar = keysar::find($id)->delete();
+        $kategori = kategori::find($id)->delete();
         return back();
     }
 }
